@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4FA6052D2D85DC00D8D5BF /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4FA6042D2D85DC00D8D5BF /* FirebaseFirestoreSwift */; };
+		2D4FA6072D2D85E400D8D5BF /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4FA6062D2D85E400D8D5BF /* FirebaseFirestore */; };
 		2D6495DA2D2D416200A8C5D7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2D6495D92D2D416200A8C5D7 /* FirebaseAnalytics */; };
 		2D6495DC2D2D416200A8C5D7 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2D6495DB2D2D416200A8C5D7 /* FirebaseAnalyticsOnDeviceConversion */; };
 		2D6495DE2D2D416200A8C5D7 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2D6495DD2D2D416200A8C5D7 /* FirebaseAnalyticsSwift */; };
@@ -36,16 +38,26 @@
 				2D6495DC2D2D416200A8C5D7 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				2D6495E22D2D416200A8C5D7 /* FirebaseAppCheck in Frameworks */,
 				2D6495E02D2D416200A8C5D7 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				2D4FA6052D2D85DC00D8D5BF /* FirebaseFirestoreSwift in Frameworks */,
+				2D4FA6072D2D85E400D8D5BF /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4FA6032D2D85DC00D8D5BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D6D7D512D2D13ED00DC7206 = {
 			isa = PBXGroup;
 			children = (
 				2D6D7D5C2D2D13ED00DC7206 /* YogaOnlineStore */,
+				2D4FA6032D2D85DC00D8D5BF /* Frameworks */,
 				2D6D7D5B2D2D13ED00DC7206 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +95,8 @@
 				2D6495DD2D2D416200A8C5D7 /* FirebaseAnalyticsSwift */,
 				2D6495DF2D2D416200A8C5D7 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				2D6495E12D2D416200A8C5D7 /* FirebaseAppCheck */,
+				2D4FA6042D2D85DC00D8D5BF /* FirebaseFirestoreSwift */,
+				2D4FA6062D2D85E400D8D5BF /* FirebaseFirestore */,
 			);
 			productName = YogaOnlineStore;
 			productReference = 2D6D7D5A2D2D13ED00DC7206 /* YogaOnlineStore.app */;
@@ -370,6 +384,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2D4FA6042D2D85DC00D8D5BF /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D6495D82D2D416200A8C5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		2D4FA6062D2D85E400D8D5BF /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D6495D82D2D416200A8C5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		2D6495D92D2D416200A8C5D7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2D6495D82D2D416200A8C5D7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
