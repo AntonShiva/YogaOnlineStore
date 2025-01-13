@@ -9,8 +9,10 @@ import SwiftUI
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
+
 struct HomeView: View {
     @FirestoreQuery(collectionPath: "YogaShop") var items: [UnitOfGoods]
+    
     var body: some View {
         NavigationStack{
             ScrollView(.vertical, showsIndicators: false){
@@ -19,13 +21,16 @@ struct HomeView: View {
                         GoodsCard(unitOfGoods: item)
                     }
                 }
-                
             }
+            .padding(.horizontal, 10)
+            .background(.secondary.opacity(0.2))
+            .shadow(color: .black.opacity(0.2), radius: 7, x: 5, y: 7)
         }
-        .padding(10)
+       
 }
 }
 
 #Preview {
     HomeView()
 }
+
