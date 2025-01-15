@@ -10,7 +10,7 @@ import Observation
 
 struct GoodsCard: View {
     @State var viewModel = ViewModel()
-    let unitOfGoods: UnitOfGoods
+    let unitOfGoods: ModelOfGoods
     var body: some View {
         GeometryReader { geometry in 
             ZStack(alignment: .bottom) {

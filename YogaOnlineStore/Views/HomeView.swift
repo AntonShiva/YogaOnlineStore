@@ -11,14 +11,17 @@ import FirebaseFirestoreSwift
 
 
 struct HomeView: View {
-    @FirestoreQuery(collectionPath: "YogaShop") var items: [UnitOfGoods]
+    @FirestoreQuery(collectionPath: "YogaShop") var items: [ModelOfGoods]
     
     var body: some View {
         NavigationStack{
             ScrollView(.vertical, showsIndicators: false){
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
                     ForEach(items) {item in
-                        GoodsCard(unitOfGoods: item)
+                        NavigationLink(destination: MoreAboutTheProduct(model: item)) {
+                            GoodsCard(unitOfGoods: item)
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
             }

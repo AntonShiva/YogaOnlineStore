@@ -13,7 +13,7 @@ import Observation
 final class ViewModel {
     private let firestoreDatabase = Firestore.firestore().collection("YogaShop")
     
-    func togle(goods: UnitOfGoods) {
+    func togle(goods: ModelOfGoods) {
         guard let id = goods.id else { return }
         firestoreDatabase.document(id).updateData(["isFavoriteProduct" : !goods.isFavoriteProduct])
     }
