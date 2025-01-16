@@ -11,12 +11,13 @@ import FirebaseFirestoreSwift
 
 struct FavoriteProducts: View {
     @FirestoreQuery(collectionPath: "YogaShop", predicates: [.isEqualTo("isFavoriteProduct", true)]) var items: [ModelOfGoods]
+    @State var viewModel = ViewModel()
     var body: some View {
         NavigationStack{
             ScrollView(.vertical, showsIndicators: false){
                 LazyVGrid(columns: Array(repeating: GridItem(), count: 2)) {
                     ForEach(items) {item in
-                        NavigationLink(destination: MoreAboutTheProduct(model: item)) {
+                        NavigationLink(destination: MoreAboutTheProduct(viewModel: viewModel, model: item)) {
                             GoodsCard(unitOfGoods: item)
                         }
                         .buttonStyle(.plain)

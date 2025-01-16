@@ -11,12 +11,27 @@ import Observation
 
 @Observable
 final class ViewModel {
+    
     private let firestoreDatabase = Firestore.firestore().collection("YogaShop")
     
-    func togle(goods: ModelOfGoods) {
+    
+    private func update(goods: ModelOfGoods, data: [String : Any]) {
         guard let id = goods.id else { return }
-        firestoreDatabase.document(id).updateData(["isFavoriteProduct" : !goods.isFavoriteProduct])
+        firestoreDatabase.document(id).updateData(data)
     }
+    
+    func togle(goods: ModelOfGoods) {
+        update(goods: goods, data: ["isFavoriteProduct" : !goods.isFavoriteProduct])
+    }
+    
+    func addGoodsUnitToCart(goods: ModelOfGoods) {
+        update(goods: goods, data: ["quantity" : 1])
+    }
+    
+    func removeGoodsUnitFromCart(goods: ModelOfGoods) {
+        update(goods: goods, data: ["quantity" : 0])
+    }
+ 
 }
 
 

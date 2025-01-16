@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MoreAboutTheProduct: View {
+    @State var viewModel = ViewModel()
     let model: ModelOfGoods
     @Environment(\.dismiss) var dismiss
     var body: some View {
@@ -35,9 +36,11 @@ struct MoreAboutTheProduct: View {
                         .secondFont()
                         .fixedSize(horizontal: false, vertical: true)
                         .lineLimit(6)
+                    
                     Spacer()
+                    
                     Button {
-                        
+                        viewModel.addGoodsUnitToCart(goods: model)
                     } label: {
                         Text("В корзину")
                             .frame(maxWidth: .infinity)
@@ -75,4 +78,5 @@ struct MoreAboutTheProduct: View {
 
 #Preview {
     MoreAboutTheProduct(model: ModelOfGoods(nameOfGoods: "Медитация", goodsDescription: "Гонг медитации создается особенное звуковое энергетическое поле, в котором психоэмоциональные чувства становится понятными и истинными, и человек находит ответы и решения.", image: "1", price: 9900, isFavoriteProduct: false))
+    
 }

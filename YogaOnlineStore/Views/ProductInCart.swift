@@ -74,7 +74,6 @@ struct ProductInCart: View {
         }
         .shadow(color: .black.opacity(0.2), radius: 7, x: 5, y: 6)
         .padding(.horizontal, 10)
-        .background(.secondary.opacity(0.3))
     }
 }
 
