@@ -32,6 +32,16 @@ final class ViewModel {
         update(goods: goods, data: ["quantity" : 0])
     }
  
+    func addMoreProduct(goods: ModelOfGoods) {
+        let newQuantity = (goods.quantity ?? 0) + 1
+        update(goods: goods, data: ["quantity" : newQuantity])
+    }
+    
+    func reduceTheQuantityOfGoods(goods: ModelOfGoods) {
+        let currentQuantity = goods.quantity ?? 0
+        let newQuantity = max(currentQuantity - 1, 1)
+        update(goods: goods, data: ["quantity" : newQuantity])
+    }
 }
 
 

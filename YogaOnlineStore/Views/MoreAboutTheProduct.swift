@@ -10,6 +10,7 @@ import SwiftUI
 struct MoreAboutTheProduct: View {
     @State var viewModel = ViewModel()
     let model: ModelOfGoods
+    
     @Environment(\.dismiss) var dismiss
     var body: some View {
         ZStack(alignment: .topLeading) {

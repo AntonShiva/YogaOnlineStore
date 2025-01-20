@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductInCart: View {
     @State private var value: Int = 0
     let modelOfGoods: ModelOfGoods
+    @State var viewModel = ViewModel()
     var body: some View {
         ZStack(alignment: .trailing) {
             HStack(spacing: 19){
@@ -29,7 +30,7 @@ struct ProductInCart: View {
             .cornerRadius(19)
             VStack(alignment: .trailing, spacing: 24){
                 Button {
-                    
+                    viewModel.removeGoodsUnitFromCart(goods: modelOfGoods)
                 } label: {
                     Image(systemName: "xmark.circle.fill")
                         .font(.title2)
@@ -39,11 +40,7 @@ struct ProductInCart: View {
                 HStack {
                     
                     Button{
-                        //                        if var quantity = modelOfGoods.quantity {
-                        //                            if quantity > 0 {
-                        //                                quantity -= 1
-                        //                            }
-                        //                        }
+                        viewModel.reduceTheQuantityOfGoods(goods: modelOfGoods)
                     } label: {
                         Image(systemName: "minus.rectangle.fill")
                             .foregroundColor(.primary)
@@ -56,11 +53,7 @@ struct ProductInCart: View {
                     }
                     
                     Button {
-                        //                        if var quantity = modelOfGoods.quantity {
-                        //                            if quantity > 0 {
-                        //                                quantity += 1
-                        //                            }
-                        //                        }
+                        viewModel.addMoreProduct(goods: modelOfGoods)
                     } label: {
                         Image(systemName: "plus.rectangle.fill")
                             .foregroundColor(.primary)
