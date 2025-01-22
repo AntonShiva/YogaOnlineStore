@@ -57,7 +57,7 @@ struct MoreAboutTheProduct: View {
                 .padding(.horizontal, 31)
             }
             .navigationBarBackButtonHidden()
-            .background(.secondary.opacity(0.3))
+            
             
             Button {
                 dismiss()
@@ -74,6 +74,8 @@ struct MoreAboutTheProduct: View {
          }
             .padding(.leading)
         }
+        .padding(.bottom, 65)
+        .background(.secondary.opacity(0.3))
     }
 }
 

@@ -11,6 +11,9 @@ import FirebaseFirestoreSwift
 
 struct ShoppingCart: View {
     @FirestoreQuery(collectionPath: "YogaShop") var items: [ModelOfGoods]
+    
+    @State var viewModel = ViewModel()
+    
     var body: some View {
         VStack{
             ScrollView(.vertical, showsIndicators: false) {
@@ -20,7 +23,7 @@ struct ShoppingCart: View {
             }
            
             
-            Text("Общая сумма:")
+            Text("Общая сумма: \(viewModel.total)")
                 .firstFont()
                 .padding()
             Button {
@@ -38,8 +41,10 @@ struct ShoppingCart: View {
             .padding(.horizontal, 29)
         
     }
+        .padding(.bottom, 35)
         .navigationTitle("Корзина")
         .background(.secondary.opacity(0.3))
+        
     }
 }
 

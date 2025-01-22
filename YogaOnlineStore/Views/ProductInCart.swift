@@ -21,7 +21,11 @@ struct ProductInCart: View {
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 VStack(alignment: .leading, spacing: 20){
                     Text(modelOfGoods.nameOfGoods)
-                    Text("Цена \(modelOfGoods.price)")
+                    if let quantity = modelOfGoods.quantity {
+                        let totalCost = quantity * modelOfGoods.price
+                        Text("Цена \(totalCost)")
+                    }
+                    
                 }
                 Spacer()
             }
@@ -46,7 +50,7 @@ struct ProductInCart: View {
                             .foregroundColor(.primary)
                         
                     }
-                    if var quantity = modelOfGoods.quantity {
+                    if let quantity = modelOfGoods.quantity {
                         Text("\(quantity)")
                             .firstFont()
                             .foregroundColor(.primary)
