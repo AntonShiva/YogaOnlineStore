@@ -1,16 +1,13 @@
-//
-//  ProductInCart.swift
-//  YogaOnlineStore
-//
-//  Created by Anton Rasen on 15.01.2025.
-//
+
 
 import SwiftUI
 
 struct ProductInCart: View {
+    
+    @State var viewModel = ViewModel()
     @State private var value: Int = 0
     let modelOfGoods: ModelOfGoods
-    @State var viewModel = ViewModel()
+    
     var body: some View {
         ZStack(alignment: .trailing) {
             HStack(spacing: 19){
@@ -25,8 +22,8 @@ struct ProductInCart: View {
                         let totalCost = quantity * modelOfGoods.price
                         Text("Цена \(totalCost)")
                     }
-                    
                 }
+                
                 Spacer()
             }
             .padding(9)
@@ -74,8 +71,4 @@ struct ProductInCart: View {
     }
 }
 
-#Preview {
-    NavigationStack {
-        ShoppingCart()
-    }
-}
+

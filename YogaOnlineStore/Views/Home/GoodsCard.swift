@@ -39,7 +39,8 @@ struct GoodsCard: View {
                         .secondFont()
                         .lineLimit(1)
                 }
-                .padding(10)
+                .padding(.leading, 3)
+                .padding(5)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(.background.opacity(0.8))
                 .clipShape(RoundedRectangle(cornerRadius: 10))

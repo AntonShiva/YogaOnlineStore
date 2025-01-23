@@ -1,9 +1,4 @@
-//
-//  MoreAboutTheProduct.swift
-//  YogaOnlineStore
-//
-//  Created by Anton Rasen on 13.01.2025.
-//
+
 
 import SwiftUI
 
@@ -79,7 +74,4 @@ struct MoreAboutTheProduct: View {
     }
 }
 
-#Preview {
-    MoreAboutTheProduct(model: ModelOfGoods(nameOfGoods: "Медитация", goodsDescription: "Гонг медитации создается особенное звуковое энергетическое поле, в котором психоэмоциональные чувства становится понятными и истинными, и человек находит ответы и решения.", image: "1", price: 9900, isFavoriteProduct: false))
-    
-}
+

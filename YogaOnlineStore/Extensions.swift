@@ -1,13 +1,9 @@
-//
-//  Extensions.swift
-//  YogaOnlineStore
-//
-//  Created by Anton Rasen on 09.01.2025.
-//
+
 
 import SwiftUI
 
 extension View {
+    // Стиль шрифтов
     func firstFont() -> some View {
         self
             .foregroundStyle(.primary)

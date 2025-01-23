@@ -1,9 +1,4 @@
-//
-//  FavoriteProducts.swift
-//  YogaOnlineStore
-//
-//  Created by Anton Rasen on 08.01.2025.
-//
+
 
 import SwiftUI
 import FirebaseFirestore
